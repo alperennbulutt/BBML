@@ -5,18 +5,25 @@
   "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.1.1",
+    "@reduxjs/toolkit": "^1.8.5",
+    "antd": "^4.22.8",
+    "axios": "^0.27.2",
     "bootstrap": "4.5.3",
     "chart.js": "3.4.1",
     "classnames": "2.3.1",
+    "cors": "^2.8.5",
+    "proxy": "https://api.muranomlbb.com",
+    "http-proxy-middleware": "^2.0.6",
     "perfect-scrollbar": "1.5.5",
     "prop-types": "15.8.1",
-    "react": "18.2.0",
+    "react": ">=16.8.0",
     "react-chartjs-2": "3.0.4",
-    "react-dom": "18.2.0",
+    "react-dom": ">=16.8.0",
     "react-notification-alert": "0.0.13",
     "react-router-dom": "5.2.0",
     "react-scripts": "5.0.1",
     "reactstrap": "8.7.1",
+    "redux": "^4.2.0",
     "sass": "1.53.0"
   },
   "scripts": {
@@ -48,6 +55,7 @@
   },
   "devDependencies": {
     "gulp": "4.0.2",
-    "gulp-append-prepend": "1.0.9"
+    "gulp-append-prepend": "1.0.9",
+    "tailwindcss": "^3.1.8"
   }
 }

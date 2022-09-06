@@ -1,40 +1,36 @@
-/*!
-
-=========================================================
-* Black Dashboard React v1.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
-
+import React, { useEffect } from "react";
+import { Input } from "antd";
 // reactstrap components
-import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
+import { Card, CardBody, Row, Col } from "reactstrap";
+import miya from "assets/img/Heroes/miya.png";
+import alice from "assets/img/Heroes/alice.png";
+import { postAccessToken } from "services/authService/authService";
 
-function Icons() {
+const Icons = () => {
+  useEffect(() => {
+    let deneme = {
+     Email:"e",
+     from:200,
+     language:"tr",
+     languageId:"753",
+     password:"v8y/B?E(H+MbQeThWmZq4t6w9z$C&F)J@NcRfUjXn2r5u8x!A%D*G-KaPdSgVkYp3s6v9y$B?E(H+MbQeThWmZq4t7w!z%C*F)J@NcRfUjXn2r5u8x/A?D(G+KaPdSgV",
+     user:"MuranoUser",
+     UserId:"9",
+     UserName:"e"
+    }
+    postAccessToken(deneme);
+  });
+
+
+
   return (
     <>
       <div className="content">
         <Row>
           <Col md="12">
             <Card>
-              <CardHeader>
-                <h5 className="title">100 Awesome Nucleo Icons</h5>
-                <p className="category">
-                  Handcrafted by our friends from{" "}
-                  <a href="https://nucleoapp.com/?ref=1712">NucleoApp</a>
-                </p>
-              </CardHeader>
               <CardBody className="all-icons">
+                <Input placeholder="Arama" />
                 <Row>
                   <Col
                     className="font-icon-list col-xs-6 col-xs-6"
@@ -43,8 +39,7 @@ function Icons() {
                     sm="4"
                   >
                     <div className="font-icon-detail">
-                      <i className="tim-icons icon-alert-circle-exc" />
-                      <p>icon-alert-circle-exc</p>
+                      <img src={miya} alt="miya" />
                     </div>
                   </Col>
                   <Col
@@ -54,8 +49,7 @@ function Icons() {
                     sm="4"
                   >
                     <div className="font-icon-detail">
-                      <i className="tim-icons icon-align-center" />
-                      <p>icon-align-center</p>
+                      <img src={alice} alt="alice" />
                     </div>
                   </Col>
                   <Col
@@ -1144,6 +1138,6 @@ function Icons() {
       </div>
     </>
   );
-}
+};
 
 export default Icons;
