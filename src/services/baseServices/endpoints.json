@@ -1,5 +1,6 @@
 {
-    "development":{
-        "GETACCESSTOKEN":"Auth/AccessToken"
-    }
+  "development": {
+    "GETACCESSTOKEN": "Auth/AccessToken",
+    "HEROESLIST": "/Heros/HerosList"
+  }
 }
